@@ -11,16 +11,39 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Schrijf de stapjes om dit te kunnen checken eerst uit en vraag jezelf de volgende dingen af:
 // * Hoe kan ik iedere waarde van de array checken op deze conditie?
 // * Hoe zorg ik ervoor dat dit ook werkt wanneer de array 100 entries bevat?
-// * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
+
+
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6
+// for (let i = 0; i < grades.length; i++) {
+//     if (grades[i] >= 8) {
+//         // console.log("Je hebt een " + grades[i]);
+//         // console.log("positie in array: " + i);
+//         // console.log("Je hebt Cum Laude behaald");
+//     }
+//     else {
+//         // console.log("Je gemiddelde is lager dan een 8. Dus helaas heb je geen Cum Laude behaald");
+//     }
+// }
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
 // Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array met eindcijfers willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+// cumLaude = (grades) => {
+//     let counter = 0;
+//     for (let i = 0; i < grades.length; i++) {
+//         if (grades[i] >= 8) {
+//             counter++;
+//         }
+//     }
+//     return counter;
+// }
+// console.log(cumLaude(grades));
+// console.log(cumLaude([6, 4, 5]));
+// console.log(cumLaude([8, 9, 4, 6, 10]));
 
 // ---- Verwachte uitkomsten:
 // cumLaude(grades) geeft 6
@@ -40,7 +63,22 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
 
-// ---- Verwachte uitkomst: 6.642857142857143
+
+
+// function calculateAverage(gradeArray) {
+//     let sum = 0;
+//     for (let i = 0; i < gradeArray.length; i++) {
+//         sum += gradeArray[i];
+//     }
+//     let average = sum / gradeArray.length;
+//     average = parseFloat(average.toFixed(2));
+//     return average;
+// }
+
+
+
+
+
 
 
 /* 2b: Omschrijven tot een herbruikbare functie */
@@ -53,10 +91,20 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // averageGrade([6, 4, 5]) geeft xxxx
 // averageGrade([8, 9, 4, 6, 10]) geeft xxxx
 
+//
+// console.log(calculateAverage(grades));
+// console.log(calculateAverage([6, 4, 5]));
+// console.log(calculateAverage([8, 9, 4, 6, 10]));
+
+
 
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
+
+
+//in bovenstanade functie verwerkt
+
 
 
 
@@ -72,6 +120,14 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 9
 
+// for (let i = 0; i < grades.length; i++) {
+//
+//
+//     if (grades[i] > grades[i + 1]) {
+//         console.log(grades[i]);
+//     }
+// }
+
 
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
@@ -82,3 +138,17 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+
+function highestGrade(gradeArray) {
+    let highest = 0;
+    for (let i = 0; i < gradeArray.length; i++) {
+        if (gradeArray[i] > highest) {
+            highest = gradeArray[i];
+        }
+    }
+    return highest;
+}
+
+console.log(highestGrade(grades));
+console.log(highestGrade([6, 4, 5]));
+console.log(highestGrade([8, 9, 4, 6, 10]));
