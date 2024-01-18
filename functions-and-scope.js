@@ -9,7 +9,8 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 //extra comment voor commit
 //extra comment voor commit
 //extra comment voor commit
-//extra comment voor commit
+//extra comment voor commitre
+
 //extra comment voor commit
 //extra comment voor commit
 
