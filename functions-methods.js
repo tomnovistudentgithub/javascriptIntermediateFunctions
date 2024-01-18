@@ -5,6 +5,7 @@
 //comment voor commmit
 //comment voor commmit
 //comment voor commmit
+//comment voor commmit
 
 /* Opdracht  1 */
 // Schrijf een functie genaamd getEmailDomain, die een emailadres verwacht en de domeinnaam teruggeeft. Een domeinnaam is hetgeen dat na het @ in het adres staat
